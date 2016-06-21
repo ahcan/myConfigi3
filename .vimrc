@@ -20,9 +20,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " Airline instead of powerline, simple yet great
 Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'majutsushi/tagbar'
-
+Plugin 'vim-airline/vim-airline-themes'
 " Completing engine
 Plugin 'Valloric/YouCompleteMe'
 
@@ -50,20 +49,26 @@ filetype plugin indent on    " required
 set encoding=utf-8
 
 " Airline Hacks
-set laststatus=2                              " without this the status line is not visible
+"let g:lightline={
+"
+set laststatus=2                              " without this the status line is not visible'
 set ttimeoutlen=50                            " to prevent delay when leaving insert mode
 let g:airline#extensions#tabline#enabled = 1  " it is disabled by default, so
-let g:airline_powerline_fonts=1               " using patched Inconsolata
-let g:airline_theme='powerlineish'            " favourite theme
+"let g:airline#extensions#tabline#left_sep = '' " it is disabled by default, so
+"let g:airline#extensions#tabline#left_alt_sep = '|'  " it is disabled by default, so
+"let g:airline_powerline_fonts=1               " using patched Inconsolata
+"let g:airline_theme='powerlineish'            " favourite theme
 let g:rehash256=1
-let g:Powerline_symbols = 'fancy'
 
 " Colorscheme
+set background=dark
+set t_Co=256
+let g:rehash256=1
 let g:molokai_original=1
 colorscheme molokai
 
 " OSX hacks
-set backspace=start,eol,indent
+"#set backspace=start,eol,indent
 
 " Search customisations
 set hlsearch incsearch ignorecase " highlight search, incremental search and ignore case
@@ -93,4 +98,4 @@ nnoremap <C-H> <C-W><C-H>
 "" Ultisnips
 let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
