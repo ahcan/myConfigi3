@@ -1,1 +1,1 @@
-../.bashrc
+/home/tronghuy/.bashrc
